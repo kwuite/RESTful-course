@@ -5,4 +5,4 @@ db.init_app(app)
 
 @app.before_first_request
 def create_tables():
-    db.create_all()
+    app['db'].create_all() # this should work as wel
